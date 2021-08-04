@@ -1,16 +1,84 @@
+# ---------------@context ----------------------------------
+
 set_array(@context, "https://w3id.org/kim/lrmi-profile/draft/context.jsonld")
 set_hash(@context.$append, @language:de)
 
-do list(path:_metadata.mods.identifier)
-	if all_match(_body, "^https://duepublico2.uni-due.de/receive/.*")
-		move_field(_body, id)
+
+# --------------id ----------------------------------------
+# a temporary variable 
+do list(path:_metadata.mods.identifier,var:a)
+	if all_match(a._body,"^https://duepublico2.uni-due.de/receive/.*")
+		copy_field(a._body,id)
 	end
 end
 
-do list(path:_metadata.mods.location)
-	do list(path: url)
-		if all_match(_body, "^https://duepublico2.uni-due.de/rsc/thumbnail/.*")
-			move_field(_body, image)
-		end
-	end
+#  ------------image ------------------------------------
+
+# copy all image URLs to a temporary array 
+copy_field(_metadata.mods.location.*.url.*._body,tmp.$append)
+
+# iterate through the temporary array
+do list(path:tmp,var:b)
+     if all_match(b,"^https://duepublico2.uni-due.de/rsc/thumbnail/.*")
+        copy_field(b,image)
+    end
 end
+
+# remove the temporary array
+remove_field(tmp)
+
+
+#  ------------title ------------------------------------
+if exists(_metadata.mods.titleInfo.*.nonSort.*._body)
+	copy_field(_metadata.mods.titleInfo.*.nonSort.*._body,title.$append)
+	copy_field(_metadata.mods.titleInfo.*.title.*._body,title.$prepend)
+	join(title, " ")
+else	
+	copy_field(_metadata.mods.titleInfo.*.title.*._body,title)
+end
+
+#  ------------creator------------------------------------
+do list(path:_metadata.mods.name,var:c)
+     if any_match(c.role.*.roleTerm.*._body,"aut|cre")
+		 	# How do I sort the name of the creator if "[LastName],[FirstName]"
+        copy_field(c.displayForm.*._body,creator.$append.name)
+				if all_equal(c.type,"personal")
+					add_field(creator.$last.type, Person)
+				end
+				if all_equal(c.type,"corporate")
+					add_field(creator.$last.type, Organization)
+				end
+    end
+end
+
+#  ------------contributor------------------------------------
+do list(path:_metadata.mods.name,var:d)
+     unless any_match(d.role.*.roleTerm.*._body,"aut|cre|his")
+		 	# How do I sort the name of the creator if "[LastName],[FirstName]"
+        copy_field(d.displayForm.*._body,contributor.$append.name)
+				if all_equal(d.type,"personal")
+					add_field(contributor.$last.type, Person)
+				end
+				if all_equal(d.type,"corporate")
+					add_field(contributor.$last.type, Organization)
+				end
+    end
+end
+
+#  ------------sourceOrganization------------------------------------
+do list(path:_metadata.mods.name,var:e)
+     unless any_match(e.role.*.roleTerm.*._body,"aut|cre|his")
+		 	# How do I sort the name of the creator if "[LastName],[FirstName]"
+        copy_field(d.displayForm.*._body,sourceOrganization.$append.name)
+				add_field(sourceOrganization.$last.type, Organization)
+    end
+end
+
+
+#  ------------sourceOrganization------------------------------------
+
+copy_field(_metadata.mods.abstract.*._body,description)
+
+# CLEANING -------
+
+retain(@context,id,image,title,creator,contributor,sourceOrganization,description)
