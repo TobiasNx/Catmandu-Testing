@@ -75,10 +75,56 @@ do list(path:_metadata.mods.name,var:e)
 end
 
 
-#  ------------sourceOrganization------------------------------------
+#  ------------description------------------------------------
 
 copy_field(_metadata.mods.abstract.*._body,description)
 
+#  ------------license------------------------------------
+
+#does not work since xlink:href is lost (this seems to be a similar problem as metafacture has)
+
+#  ------------dataCreated------------------------------------
+
+copy_field(_metadata.mods.originInfo.*.dateIssued.*._body,dataCreated)
+
+
+#  ------------inLanguage------------------------------------
+copy_field(_metadata.mods.language.*.languageTerm.*._body,inLanguage.$append)
+
+# ---------------type ----------------------------------
+set_array(type, "LearningResource")
+
+# ---------------learningResourceType----------------------------------
+do list(path:_metadata.mods.genre,var:f)
+	if all_equal(f.authority,"marcgt")
+		copy_field(f._body,learningResourceType.$append.id)
+	end
+end
+do list(path:learningResourceType)
+	lookup(id,"DuePub-HCRT.tsv",sep_char:"\t")
+	copy_field(id,preflabel.de)
+	lookup(preflabel.de,"hcrt-de-labels.tsv",sep_char:"\t")
+	copy_field(id,preflabel.en)
+	lookup(preflabel.en,"hcrt-en-labels.tsv",sep_char:"\t")
+end
+
+#  ------------keywords------------------------------------
+copy_field(_metadata.mods.subject.*.topic.*._body,keywords)
+split_field(keywords,",")
+trim(keywords.*)
+
+#  ------------about------------------------------------
+do list(path:_metadata.mods.classification,var:f)
+	if all_equal(f.authorityURI,"https://duepublico.uni-due.de/api/v1/classifications/destatis")
+		copy_field(f.valueURI,about.$append.id)
+	end
+end
+do list(path:about)
+	lookup(id,"DestatisPersonal2DestatisStudierende.tsv",sep_char:"\t")
+	copy_field(id,preflabel.de)
+	lookup(preflabel.de,"subject-labels.tsv",sep_char:"\t")
+end
+
 # CLEANING -------
 
-retain(@context,id,image,title,creator,contributor,sourceOrganization,description)
+retain(@context,id,image,title,creator,contributor,sourceOrganization,description,dataCreated,inLanguage,type,learningResourceType,keywords,about)
