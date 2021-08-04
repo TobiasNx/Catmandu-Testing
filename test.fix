@@ -1,0 +1,18 @@
+copy(name, title)
+copy(author,creator)
+
+do list(path:creator)
+	if all_equal(@type, Personal)
+		add_field(type, Person)
+		remove(@type)		
+	end
+	if all_equal(@type, Organisation)
+		add_field(type, Organization)
+		remove(@type)		
+	end
+end
+
+split_field(keywords, ",")
+trim(keywords.*)
+
+retain(creator, title, keywords)

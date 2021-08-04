@@ -1,0 +1,32 @@
+{
+	"@context": "http://schema.org/",
+	"@type": "Course",
+	"name": "Verwendung von Bioabfall",
+	"description": "Dieser Beitrag ist auch verfügbar auf: English (Englisch) Español (Spanisch) Français (Französisch)\nDer Begriff Bioabfall steht für ausrangiertes, biologisch abbaubares Material. Das bedeutet, dass er von Mikroorganismen unter anaeroben und aeroben Bedingungen in Kohlendioxid, Wasser, Methan oder einfache organische Moleküle zerlegt werden kann. Einer der Hauptgründe, warum Bioabfälle eine Gefahr für die Umwelt darstellen, ist die Entstehung von Methan bei der Zersetzung in Deponien. Diese Umweltbelastung kann durch die getrennte Sammlung und Verwendung von Bioabfällen erheblich reduziert werden. Hinsichtlich des Nutzungspotenzials, d.h. der Boden- oder Energierückgewinnung, werden Bioabfälle noch immer weitgehend ungenügend genutzt. Durch die Anwendung traditioneller Praktiken bei Recycling, Wiederverwendung und Kompostierung kann die unkontrollierte Abfallentsorgung deutlich verringert werden, was besonders in Regionen ohne Zugang zu formellen Sammeldiensten wichtig ist. Die Kompostierung kann beispielsweise sogar die Erzeugung von hochwertigem Naturdünger sicherstellen, weshalb diese Praxis gefördert werden sollte.\n",
+	"datePublished": "2020-11-03T10:24:47.666Z",
+	"dateModified": "2020-11-03T10:31:37.253Z",
+	"keywords": "Biowissenschaften, Biologie,Naturwissenschaften und Mathematik,Ingenieurwissenschaften,Technik, Medizin, angewandte Wissenschaften,RUVIVAL Toolbox,RUVIVAL,Bioabfall,Wiederverwertung",
+	"image": "https://api.hoou.de/api/pandora/bf241259-e0fc-41b7-a9c0-5bdd62332432/preview_500x",
+	"thumbnailUrl": "https://api.hoou.de/api/pandora/bf241259-e0fc-41b7-a9c0-5bdd62332432/thumbnail",
+	"author": [
+		{
+			"@type": "Organisation",
+			"name": "RUVIVAL Team"
+		},
+		{
+			"@type": "Personal",
+			"name": "Manasa Suresh"
+		}
+	],
+	"provider": [
+		{
+			"@context": "http://schema.org/",
+			"@type": "CollegeOrUniversity",
+			"name": "Technische Universität Hamburg",
+			"logo": "https://api.hoou.de/api/promo/institution_bb5f90af-65ad-4b39-97e7-df4e4c39d1b6_logo_c5536e4e5669/500x",
+			"image": "https://api.hoou.de/api/promo/institution_bb5f90af-65ad-4b39-97e7-df4e4c39d1b6_logo_c5536e4e5669/500x",
+			"url": "https://www.tuhh.de"
+		}
+	],
+	"@id": "https://www.hoou.de/projects/verwendung-von-bioabfall"
+}

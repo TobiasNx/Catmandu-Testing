@@ -1,0 +1,106 @@
+---
+_about: []
+_datestamp: 2020-04-17
+_id: oai:oer.uni-due.de:duepublico_mods_00071610
+_identifier: oai:oer.uni-due.de:duepublico_mods_00071610
+_metadata:
+  mods:
+    ID: duepublico_mods_00071610
+    abstract:
+    - _body: "Neuere PowerPoint-Versionen bieten eine integrierte Funktion, mit der
+        Sie Ihre Bildschirmpräsentation als Video aufzeichnen und dazu Ihren Präsentationstext
+        einsprechen können - eine einfach zu realisierende Möglichkeit, Vorträge inklusive
+        Ton (und auf Wunsch auch Video) bereitzustellen. Unsere Anleitung zeigt Schritt
+        für Schritt, wie's geht!\r\n\r\nMitarbeiter*innen von Bildungseinrichtungen
+        dürfen das Softwarepaket Office-Professional-Plus (inkl. Power Point) im Übrigen
+        zur dienstbezogenen Nutzung auf Privatgeräten installieren (\"Work-at-Home
+        Lizenzen\"). Weitere Hinweise zur kostenfreien Nutzung finden Sie hier:\r\nhttps://www.uni-due.de/zim/services/software/office-365.php"
+    accessCondition:
+    - _body: ~
+      type: use and reproduction
+    classification:
+    - _body: ~
+      authorityURI: https://duepublico.uni-due.de/api/v1/classifications/collection
+      valueURI: https://duepublico.uni-due.de/api/v1/classifications/collection#OER
+    - _body: ~
+      authorityURI: https://duepublico.uni-due.de/api/v1/classifications/diniPublType
+      generator: mir_genres2diniPublType-mycore
+      valueURI: https://duepublico.uni-due.de/api/v1/classifications/diniPublType#CourseMaterial
+    - _body: ~
+      authorityURI: https://duepublico.uni-due.de/api/v1/classifications/destatis
+      valueURI: https://duepublico.uni-due.de/api/v1/classifications/destatis#100
+    - _body: '000'
+      authority: sdnb
+      displayLabel: sdnb
+    genre:
+    - _body: instruction
+      authority: marcgt
+    - _body: ~
+      authorityURI: https://duepublico.uni-due.de/api/v1/classifications/mir_genres
+      valueURI: https://duepublico.uni-due.de/api/v1/classifications/mir_genres#manual
+    identifier:
+    - _body: duepublico_mods_00071610
+    - _body: https://duepublico2.uni-due.de/receive/duepublico_mods_00071610
+    language:
+    - languageTerm:
+      - _body: de
+        authority: rfc5646
+        type: code
+    location:
+    - url:
+      - _body: https://duepublico2.uni-due.de/receive/duepublico_mods_00071610
+        access: object in context
+      - _body: https://duepublico2.uni-due.de/servlets/MCRZipServlet/duepublico_derivate_00071447
+        access: raw object
+      - _body: https://duepublico2.uni-due.de/rsc/thumbnail/duepublico_mods_00071610.png
+        access: preview
+    name:
+    - displayForm:
+      - _body: Pichler, Cathrin
+      namePart:
+      - _body: Pichler
+        type: family
+      - _body: Cathrin
+        type: given
+      role:
+      - roleTerm:
+        - _body: cre
+          authority: marcrelator
+          type: code
+        - _body: Creator
+          authority: marcrelator
+          type: text
+      type: personal
+    - authorityURI: https://duepublico.uni-due.de/api/v1/classifications/mir_institutes
+      role:
+      - roleTerm:
+        - _body: his
+          authority: marcrelator
+          type: code
+        - _body: ~
+          authority: marcrelator
+          type: text
+      type: corporate
+      valueURI: https://duepublico.uni-due.de/api/v1/classifications/mir_institutes#03.02.01
+    note:
+    - _body: "Das Video fungiert gleichermaßen als Anleitung wie auch als Demonstration
+        für das Aufzeichnungsergebnis.\r\nNutzen Sie beispielsweise den VLC-Player,
+        um sich die wmv-Datei anzusehen.\r\nWenn Sie alternativ zur wmv-Video-Datei
+        die ppt-Datei via PowerPoint öffnen, müssen Sie die Bildschirmpräsentation
+        starten, um sich die Aufzeichnung via PowerPoint ansehen zu können."
+      type: requirements
+    subject:
+    - topic:
+      - _body: Corona, digitale Lehre, PowerPoint
+    titleInfo:
+    - title:
+      - _body: Schritt-für-Schritt Anleitung für eine Aufzeichnung via PowerPoint
+    typeOfResource:
+    - _body: moving image
+    version: '3.5'
+_resumption: {}
+_setSpec:
+- ddc:000
+- doc-type:CourseMaterial
+_status: ''
+...

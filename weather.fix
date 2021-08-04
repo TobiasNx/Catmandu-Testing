@@ -1,0 +1,4 @@
+retain_field(main)
+retain_field(main.temp)
+prepend(main.temp,"The temperature is")
+append(main.temp," degrees Kelvin")

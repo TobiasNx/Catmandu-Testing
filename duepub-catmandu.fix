@@ -1,0 +1,16 @@
+set_array(@context, "https://w3id.org/kim/lrmi-profile/draft/context.jsonld")
+set_hash(@context.$append, @language:de)
+
+do list(path:_metadata.mods.identifier)
+	if all_match(_body, "^https://duepublico2.uni-due.de/receive/.*")
+		move_field(_body, id)
+	end
+end
+
+do list(path:_metadata.mods.location)
+	do list(path: url)
+		if all_match(_body, "^https://duepublico2.uni-due.de/rsc/thumbnail/.*")
+			move_field(_body, image)
+		end
+	end
+end
