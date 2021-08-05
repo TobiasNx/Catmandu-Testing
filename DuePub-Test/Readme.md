@@ -11,7 +11,7 @@ To run the workflow:
 Things that I found:
 
 - differences to metafacture morph:
-  - While the final metadata structure of the record can be recognised in the morph. You create the structure and add fitting pieses. Catmandu Fix is a reconstruction operation. You have a record and rebuild, move, transform and throw stuff away.
+  - While the final metadata structure of the record can be recognised in the Morph. You create the structure and add fitting pieces. Once you set a piece you cannot do anything with it. Catmandu Fix is a reconstruction operation. You have a record and rebuild, move, transform and throw stuff away. Since you remodel a data set you also can remodel already changed fields.
   
   - Catmandu is usind *JSON-Path*, that metafacture is not. While XML files do not have arrays in Catmandu repeatable fields are constructed as arrays.
 
