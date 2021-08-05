@@ -17,5 +17,6 @@ Things that I found:
 
 - It seems that there are no filter functions as in metamorph. Only map a field that conforms to a certain filter. In FIX you have to build an if conditional an then operate. This seems to be more difficult than in metafacture.
 
-- Also transformation functions in metafacture seem to be more advanced but also complex. Especially the combination of transformations and filters for one single field are easier and more advanced. In catmandu you only can do one transformation and movement at a time, while in Metamorph you can combine mapping and transformation. This also helps to make the code more readable if that would be possible. In metafacture fix we experimented with `do map ... end`  as a bind for combining mulitple filters and transformation for one field.
+- Collectors are no existing concepts in Catmandu. But this makes it complicated to e.g. merge fields.
 
+- Also transformation functions in metafacture seem to be more advanced but also complex. Especially the combination of transformations and filters for one single field are easier and more advanced. In catmandu you only can do one transformation and movement at a time, while in Metamorph you can combine mapping and transformation. This also helps to make the code more readable if that would be possible. In metafacture fix we experimented with `do map ... end`  as a bind for combining mulitple filters and transformation for one field.
