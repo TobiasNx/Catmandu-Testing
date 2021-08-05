@@ -1,3 +1,7 @@
+if exists (_metadata.error)
+	reject()
+end
+
 # ---------------@context ----------------------------------
 
 set_array(@context, "https://w3id.org/kim/lrmi-profile/draft/context.jsonld")
@@ -51,6 +55,8 @@ do list(path:_metadata.mods.name,var:c)
     end
 end
 
+replace_all(creator.*.name,'(.+), (.+)', '$2 $1')
+
 #  ------------contributor------------------------------------
 do list(path:_metadata.mods.name,var:d)
      unless any_match(d.role.*.roleTerm.*._body,"aut|cre|his")
@@ -64,6 +70,8 @@ do list(path:_metadata.mods.name,var:d)
 				end
     end
 end
+
+replace_all(contributor.*.name,'(.+), (.+)', '$2 $1')
 
 #  ------------sourceOrganization------------------------------------
 do list(path:_metadata.mods.name,var:e)
@@ -128,3 +136,4 @@ end
 # CLEANING -------
 
 retain(@context,id,image,title,creator,contributor,sourceOrganization,description,dataCreated,inLanguage,type,learningResourceType,keywords,about)
+vacuum()
