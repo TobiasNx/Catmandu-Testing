@@ -1,0 +1,23 @@
+compose -> prepend,apprend
+constant -> add_field
+timestamp
+substring -> substring
+lookup -> lookup
+case -> upcase, downcase
+normalize-utf8
+dateformat
+split -> split, but only to array
+isbn
+htmlanchor
+switch-name-value
+script/java
+count
+whitelist
+blacklist
+contains/not-contains
+equals/not-equals
+occurence
+regexp
+unique
+buffer
+
