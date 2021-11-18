@@ -1,0 +1,23 @@
+# A:
+do list(path:record.creator)
+	copy_field(type, A_CREATORS.$append.type)
+	copy_field(name, A_CREATORS.$last.name)
+end
+
+# B:
+do list(path:record.creator, var:c)
+	copy_field(c.type, B_CREATORS.$append.type)
+	copy_field(c.name, B_CREATORS.$last.name)
+end
+
+# C:
+do each(path:record.creator, var:c)
+	copy_field(c.type, C_kreators.$append.type)
+	copy_field(c.name, C_kreators.$last.name)
+end
+
+# D: 
+do each(path:record.creator)
+	copy_field(type, D_KREATORS.$append.type)
+	copy_field(name, D_KREATORS.$last.name)
+end

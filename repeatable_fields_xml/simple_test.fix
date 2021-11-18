@@ -1,0 +1,2 @@
+copy_field(record.creator, A_CREATORS.$append)
+copy_field(record.creator.*, B_KREATORS.$append)

@@ -1,0 +1,68 @@
+---
+B_CREATORS:
+- name: Katinka
+  type: Person
+- name: Jens
+  type: Person
+- name: Tobias
+  type: Person
+- name: Fabian
+  type: Person
+record:
+  creator:
+  - A_CREATORS:
+    - name: Katinka
+      type: Person
+    name: Katinka
+    type: Person
+  - A_CREATORS:
+    - name: Jens
+      type: Person
+    name: Jens
+    type: Person
+  - A_CREATORS:
+    - name: Tobias
+      type: Person
+    name: Tobias
+    type: Person
+  - A_CREATORS:
+    - name: Fabian
+      type: Person
+    name: Fabian
+    type: Person
+...
+---
+record:
+  creator:
+    A_CREATORS:
+    - name: Fabian
+      type: Person
+    D_KREATORS:
+    - name: Fabian
+      type: Person
+    - name: Fabian
+      type: Person
+    - name: Fabian
+      type: Person
+    name: Fabian
+    type: Person
+...
+---
+B_CREATORS:
+- name: Katinka
+  type: Person
+- name: Jens
+  type: Person
+record:
+  creator:
+  - A_CREATORS:
+    - name: Katinka
+      type: Person
+    name: Katinka
+    type: Person
+  - A_CREATORS:
+    - name: Jens
+      type: Person
+    name: Jens
+    type: Person
+...

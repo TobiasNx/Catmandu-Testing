@@ -1,0 +1,18 @@
+---
+record:
+  creator:
+  - Katinka
+  - Jens
+  - Tobias
+  - Fabian
+...
+---
+record:
+  creator: Fabian
+...
+---
+record:
+  creator:
+  - Katinka
+  - Jens
+...

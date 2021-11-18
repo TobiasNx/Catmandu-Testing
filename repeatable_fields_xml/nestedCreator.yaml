@@ -1,0 +1,26 @@
+---
+record:
+  creator:
+  - name: Katinka
+    type: Person
+  - name: Jens
+    type: Person
+  - name: Tobias
+    type: Person
+  - name: Fabian
+    type: Person
+...
+---
+record:
+  creator:
+    name: Fabian
+    type: Person
+...
+---
+record:
+  creator:
+  - name: Katinka
+    type: Person
+  - name: Jens
+    type: Person
+...

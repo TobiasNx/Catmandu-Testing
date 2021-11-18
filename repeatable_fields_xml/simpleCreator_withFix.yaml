@@ -1,0 +1,36 @@
+---
+A_CREATORS:
+- - Katinka
+  - Jens
+  - Tobias
+  - Fabian
+B_KREATORS:
+- Katinka
+- Jens
+- Tobias
+- Fabian
+record:
+  creator:
+  - Katinka
+  - Jens
+  - Tobias
+  - Fabian
+...
+---
+A_CREATORS:
+- Fabian
+record:
+  creator: Fabian
+...
+---
+A_CREATORS:
+- - Katinka
+  - Jens
+B_KREATORS:
+- Katinka
+- Jens
+record:
+  creator:
+  - Katinka
+  - Jens
+...
