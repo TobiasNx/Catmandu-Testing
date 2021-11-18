@@ -1,0 +1,36 @@
+<records>
+	<record>
+		<creator>
+			<name>Katinka</name>
+			<type>Person</type>
+		</creator>
+		<creator>
+			<name>Jens</name>
+			<type>Person</type>
+		</creator>
+		<creator>
+			<name>Tobias</name>
+			<type>Person</type>
+		</creator>
+		<creator>
+			<name>Fabian</name>
+			<type>Person</type>
+		</creator>
+	</record>
+	<record>
+		<creator>
+			<name>Fabian</name>
+			<type>Person</type>
+		</creator>
+	</record>
+	<record>
+		<creator>
+			<name>Katinka</name>
+			<type>Person</type>
+		</creator>
+		<creator>
+			<name>Jens</name>
+			<type>Person</type>
+		</creator>
+	</record>
+</records>
