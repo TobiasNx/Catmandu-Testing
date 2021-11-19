@@ -1,4 +1,4 @@
-Ich habe versucht wie CATMANDU sich verhält, wenn in verschiedene records mit unterschiedlichen Feldern auftauchen:
+Ich habe ausprobiert wie CATMANDU sich verhält, wenn in verschiedene records mit unterschiedlichen Feldern auftauchen:
 I tried how Catmandu is handling records with an field that occurs 1+n times. Some records have multiple some one instance of the field.
 
 Wiederholung eines Feldes mit string-value /Repeated field with string value:
