@@ -1,0 +1,2 @@
+copy_field("deep.nested.test","TEST")
+lookup("TEST.*","ArrayHandling/map.tsv", sep_char:'\t')
